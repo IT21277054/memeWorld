@@ -1,23 +1,45 @@
 <html>
 <head>
-<title> meme </title>
-<style>
-    table, th {
-      border: 1px solid black;
-      border-collapse: collapse;
-    }
-    th {
-      padding: 5px;
-      text-align: left;    
-    }
+<title> Meme World </title>
+    <style>
+        ul {
+          list-style-type: none;
+          margin: 0;
+          padding: 0;
+          overflow: hidden;
+          background-color: #333;
+}
+
+          li {
+            float: right;
+          }
+
+          li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+          }
+
+          li a:hover:not(.active) {
+              background-color: #111;
+          }
+
+          .active {
+              background-color: #04AA6D;
+          }
     </style>
 </head>
 <body>
-    <table style="width:100%">
-        <tr>
-          <th>Name</th>
-          <th colspan="2">about</th>
-        </tr>   
-</table>
+
+  <ul> 
+    <li><img src="memeWorld\Images\imaIAG_globe_v5.gif"></li> 
+    <li><a href="#contact">Contact Us</a></li>
+    <li><a href="#about">About</a></li>
+  </ul>
+    
+
+
 </body>
 </html>
