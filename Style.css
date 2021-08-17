@@ -42,7 +42,7 @@
 
                   /*About us styles*/
 
-                    body {background-color: #4f5052 ;}
+                    body {background-color: #505050 ;}
                     h1{color:rgb(255, 255, 255); font-family: Helvetica; text-align: center;  }
                     p{font-size: 20px; text-align: center; line-height: 1.5; font-family: Helvetica; }
                     div{align-items: center;}
@@ -52,8 +52,31 @@
                   
                     .manuja{
                       position: absolute;
-                      top: 0px;
-                      right:90px;
-                      
-                    
+                      top: 65%;
+                      right:48%;
+                    }
+                    .shamry{
+                      position: absolute;
+                      top: 64%;
+                      right:25%;
+                    }
+                    .banuka{
+                      position: absolute;
+                      top: 40%;
+                      right:65%;
+                    }
+                    .sunera{
+                      position: absolute;
+                      top: 40%;
+                      right:4%;
+                    }
+                    .vishwa{
+                      position: absolute;
+                      top: 17%;
+                      right:70%;
+                    }
+                    .thusara{
+                      position: absolute;
+                      top: 17%;
+                      right:2%;
                     }
