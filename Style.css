@@ -37,7 +37,6 @@
                   /*NAVBAR*/
 
 
-<<<<<<< HEAD
                   * {
                     box-sizing: border-box;
                   }
@@ -90,14 +89,14 @@
                     background-color: #666;
                     color: white;
                   }
-=======
+
                  
 
 
                   /*About us styles*/
 
-                    body {background-color: #1a2291 ;}
+                    body {background-color: #ffffff ;}
                     h1{color:rgb(255, 255, 255); font-family: Helvetica; text-align: center;  }
                     p{font-size: 20px; text-align: center; line-height: 1.5; font-family: Helvetica; }
                     div{align-items: center;}
->>>>>>> 17289239c8e86bb99752db526158204cce58488e
+ 
