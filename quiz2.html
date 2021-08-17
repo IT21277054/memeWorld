@@ -1,0 +1,184 @@
+<html>
+    <title>MEME QUIZ 2 </title>
+<head>
+ <style>
+        @import url(https://fonts.googleapis.com/css?family=Roboto);
+$white: #fff;
+$black: #000;
+$dark: #192228;
+$bluegreen: #058d7a;
+$darkblue: #003356;
+$green: #86a238;
+$yellow: #dda227;
+$red: #cf5957;
+$grey: #e4e4e4;
+body{
+  font-family: 'Roboto', sans-serif;  
+}
+
+@mixin quiz_answers_1 {
+  //Answers page 1
+  input[id=yes1].step1:checked ~ .container .q1 label.correct,
+  input[id=no2].step2:checked ~ .container .q2 label.correct,
+  input[id=no3].step3:checked ~ .container .q3 label.correct,
+  input[id=yes4].step4:checked ~ .container .q4 label.correct{
+    background-color: $green;
+    counter-increment: score;
+    color: $white;
+  }
+  input[id=no1].step1:checked ~ .container .q1 label.wrong,
+  input[id=yes2].step2:checked ~ .container .q2 label.wrong,
+  input[id=yes3].step3:checked ~ .container .q3 label.wrong,
+  input[id=no4].step4:checked ~ .container .q4 label.wrong{
+    background-color: $red;
+    color: $white;
+  }
+}
+
+
+@mixin quiz{
+  input.step1:checked ~ .container .q2,
+  input.step2:checked ~ .container .q3,
+  input.step3:checked ~ .container .q4{
+    position: relative;
+    left: 0;
+  }
+  input.step4:checked ~ .container{
+    .status{
+      display: block;
+    }
+    .q{
+      position: relative !important;
+      left: 0 !important;
+      opacity: 1 !important;
+      h2{
+        font-size: 20px;
+        margin-bottom: 10px;
+      }
+      label{
+        background-color: $grey;
+        padding: 30px;
+      }
+    }  
+  } 
+  input.step1:checked ~ .container .q1,
+  input.step2:checked ~ .container .q2,
+  input.step3:checked ~ .container .q3,
+  input.step4:checked ~ .container .q4{
+    position: absolute;
+    opacity: 0;
+  }
+
+// Score counter
+  .score{
+    margin-top: 40px;
+    h3:after{
+      content: counter(score);
+    }
+  }
+
+//General styling
+  .container{
+    max-width: 500px;
+    margin: 0 auto;
+    text-align: center;
+    counter-reset: score;
+  }
+  .status{
+    display: none;
+  }
+  h2{
+    max-width: 500px;
+    margin: 0 auto 30px;
+    color: $black;
+  }
+  label{
+    display: inline-block;
+    padding: 40px;
+    border-radius: 50%;
+    background-color: $bluegreen;
+    color: $white;
+    margin: 0 40px;
+    text-align: center;
+    display: inline-block;
+    width: 30px;
+    line-height: 30px;
+    transition: opacity .5s;
+    &:hover{
+      opacity: .7;
+    }
+  }
+  .q{
+    margin-bottom: 40px;
+    position: absolute;
+    left: -2000px;
+    transition: all .8s cubic-bezier(0.44, 0.25, 0.65, 0.38);
+    width: 100%;
+  }
+  .q1{
+    position: relative;
+    left: 0;
+  }
+  input{
+    // position: absolute;
+    // left: -9999px;
+    display: none;
+  }
+  .status{
+    margin-bottom: 20px;
+  }
+}
+
+.quiz{
+  margin-top: 100px;
+}
+
+.quiz{
+  @include quiz;
+  @include quiz_answers_1;
+}
+</style>
+</head>
+   
+<body>
+
+<div class="row quiz">
+    <input class="step1" type="radio" id="yes1" name="q1" />
+    <input class="step1" type="radio" id="no1" name="q1" />
+    <input class="step2" type="radio" id="yes2" name="q2" />
+    <input class="step2" type="radio" id="no2" name="q2" />
+    <input class="step3" type="radio" id="yes3" name="q3" />
+    <input class="step3" type="radio" id="no3" name="q3" />
+    <input class="step4" type="radio" id="yes4" name="q4" />
+    <input class="step4" type="radio" id="no4" name="q4" />
+    <div class="container">
+      <div class="status">
+        <h2>Dine svar:</h2>
+      </div>
+      <div class="q q1">
+        <h2>1 Lorem Ipsum Dolor Sit Amet Conse?</h2>
+        <label for="yes1" class="correct">Yes</label>
+        <label for="no1" class="wrong">No</label>
+      </div>
+      <div class="q q2">
+        <h2>2 Lorem Ipsum Dolor Sit Amet Conse?</h2>
+        <label for="yes2" class="wrong">Yes</label>
+        <label for="no2" class="correct">No</label>
+      </div>
+      <div class="q q3">
+        <h2>3 Lorem Ipsum Dolor Sit Amet Conse?</h2>
+        <label for="yes3" class="wrong">Yes</label>
+        <label for="no3" class="correct">No</label>
+      </div>
+      <div class="q q4">
+        <h2>4 Lorem Ipsum Dolor Sit Amet Conse?</h2>
+        <label for="yes4" class="correct">Yes</label>
+        <label for="no4" class="wrong">No</label>
+      </div>
+      <div class="score">
+        <h3>Score: </h3>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
