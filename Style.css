@@ -34,6 +34,9 @@
                   
                   }
                   
+                  
+
+
                   /*NAVBAR*/
 
 
@@ -133,7 +136,8 @@ Remove or comment-out the code block below to see how the browser will fall-back
 		margin: 0;
 	}
 }
-
+                  /*About us page*/
+                  
                     body {background-color: #505050 ;}
                     h1{color:rgb(255, 255, 255); font-family: Helvetica; text-align: center; font-size: 40px; }
                     p{font-size: 20px; text-align: center; line-height: 1.5; font-family: Helvetica; }
@@ -176,3 +180,57 @@ Remove or comment-out the code block below to see how the browser will fall-back
                       text-align: justify;
                       font-size: 20px;
                     }
+
+
+                    /*Contact Us Page */
+                  .container_contact_us{
+                    position: relative;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 100%;
+                    height: 100%;
+                    padding: 20px 100px;
+                  }  
+                  .container_contact_us:after{
+                    content: '';
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    width: 100%;
+                    height: 100%;
+                    
+
+                  }
+                  .content_box_contact_us{
+                    max-width: 850px;
+                    display: grid;
+                    grid-template-columns: repeat(2,1fr);
+                    justify-content: center;
+                    align-items: center;
+                    text-align: center;
+                  }
+                  .left_contact_us{
+                    height: 100%;
+                    background: url("Images/IAG_globe_v5.gif") no-repeat center;
+                    background-size: cover;  
+                  }
+                  .right_contact_us{
+                    padding: 25px 40px;
+                  }
+                  h2{
+                    position: relative;
+                    padding-bottom: 10px;
+                    margin-bottom: 10px;
+                  }
+                  h2::after{
+                    content: '';
+                    position: absolute;
+                    left: 50%;
+                    bottom: 0;
+                    transform: translateX(-50%);
+                    height: 4px;
+                    width:50px;
+                    border-radius: 2px;
+                    background-color: #2ecc71;
+                  }
