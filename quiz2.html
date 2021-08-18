@@ -1,184 +1,116 @@
-<html>
-    <title>MEME QUIZ 2 </title>
-<head>
- <style>
-        @import url(https://fonts.googleapis.com/css?family=Roboto);
-$white: #fff;
-$black: #000;
-$dark: #192228;
-$bluegreen: #058d7a;
-$darkblue: #003356;
-$green: #86a238;
-$yellow: #dda227;
-$red: #cf5957;
-$grey: #e4e4e4;
-body{
-  font-family: 'Roboto', sans-serif;  
-}
-
-@mixin quiz_answers_1 {
-  //Answers page 1
-  input[id=yes1].step1:checked ~ .container .q1 label.correct,
-  input[id=no2].step2:checked ~ .container .q2 label.correct,
-  input[id=no3].step3:checked ~ .container .q3 label.correct,
-  input[id=yes4].step4:checked ~ .container .q4 label.correct{
-    background-color: $green;
-    counter-increment: score;
-    color: $white;
-  }
-  input[id=no1].step1:checked ~ .container .q1 label.wrong,
-  input[id=yes2].step2:checked ~ .container .q2 label.wrong,
-  input[id=yes3].step3:checked ~ .container .q3 label.wrong,
-  input[id=no4].step4:checked ~ .container .q4 label.wrong{
-    background-color: $red;
-    color: $white;
-  }
+:root {
+	--primary-c: #2196F3;
+	--secondary-c: #B2D7F5;
+	
+	--white: #FDFBFB;
+	
+	--text: #082943;	
+	--bg: var(--primary-c);
 }
 
 
-@mixin quiz{
-  input.step1:checked ~ .container .q2,
-  input.step2:checked ~ .container .q3,
-  input.step3:checked ~ .container .q4{
-    position: relative;
-    left: 0;
-  }
-  input.step4:checked ~ .container{
-    .status{
-      display: block;
-    }
-    .q{
-      position: relative !important;
-      left: 0 !important;
-      opacity: 1 !important;
-      h2{
-        font-size: 20px;
-        margin-bottom: 10px;
-      }
-      label{
-        background-color: $grey;
-        padding: 30px;
-      }
-    }  
-  } 
-  input.step1:checked ~ .container .q1,
-  input.step2:checked ~ .container .q2,
-  input.step3:checked ~ .container .q3,
-  input.step4:checked ~ .container .q4{
-    position: absolute;
-    opacity: 0;
-  }
-
-// Score counter
-  .score{
-    margin-top: 40px;
-    h3:after{
-      content: counter(score);
-    }
-  }
-
-//General styling
-  .container{
-    max-width: 500px;
-    margin: 0 auto;
-    text-align: center;
-    counter-reset: score;
-  }
-  .status{
-    display: none;
-  }
-  h2{
-    max-width: 500px;
-    margin: 0 auto 30px;
-    color: $black;
-  }
-  label{
-    display: inline-block;
-    padding: 40px;
-    border-radius: 50%;
-    background-color: $bluegreen;
-    color: $white;
-    margin: 0 40px;
-    text-align: center;
-    display: inline-block;
-    width: 30px;
-    line-height: 30px;
-    transition: opacity .5s;
-    &:hover{
-      opacity: .7;
-    }
-  }
-  .q{
-    margin-bottom: 40px;
-    position: absolute;
-    left: -2000px;
-    transition: all .8s cubic-bezier(0.44, 0.25, 0.65, 0.38);
-    width: 100%;
-  }
-  .q1{
-    position: relative;
-    left: 0;
-  }
-  input{
-    // position: absolute;
-    // left: -9999px;
-    display: none;
-  }
-  .status{
-    margin-bottom: 20px;
-  }
+/* Basic Config
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+html, body {
+	height: 100%;
+	padding: 0;
+	margin: 0;
 }
 
-.quiz{
-  margin-top: 100px;
+body {
+  background-color: var(--bg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+	font-family: 'Raleway', sans-serif;
+	color: var(--text);
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
 
-.quiz{
-  @include quiz;
-  @include quiz_answers_1;
+ul {
+	list-style-type: none;
+	padding-left: 50px;
+	margin: 0;
 }
-</style>
-</head>
-   
-<body>
 
-<div class="row quiz">
-    <input class="step1" type="radio" id="yes1" name="q1" />
-    <input class="step1" type="radio" id="no1" name="q1" />
-    <input class="step2" type="radio" id="yes2" name="q2" />
-    <input class="step2" type="radio" id="no2" name="q2" />
-    <input class="step3" type="radio" id="yes3" name="q3" />
-    <input class="step3" type="radio" id="no3" name="q3" />
-    <input class="step4" type="radio" id="yes4" name="q4" />
-    <input class="step4" type="radio" id="no4" name="q4" />
-    <div class="container">
-      <div class="status">
-        <h2>Dine svar:</h2>
-      </div>
-      <div class="q q1">
-        <h2>1 Lorem Ipsum Dolor Sit Amet Conse?</h2>
-        <label for="yes1" class="correct">Yes</label>
-        <label for="no1" class="wrong">No</label>
-      </div>
-      <div class="q q2">
-        <h2>2 Lorem Ipsum Dolor Sit Amet Conse?</h2>
-        <label for="yes2" class="wrong">Yes</label>
-        <label for="no2" class="correct">No</label>
-      </div>
-      <div class="q q3">
-        <h2>3 Lorem Ipsum Dolor Sit Amet Conse?</h2>
-        <label for="yes3" class="wrong">Yes</label>
-        <label for="no3" class="correct">No</label>
-      </div>
-      <div class="q q4">
-        <h2>4 Lorem Ipsum Dolor Sit Amet Conse?</h2>
-        <label for="yes4" class="correct">Yes</label>
-        <label for="no4" class="wrong">No</label>
-      </div>
-      <div class="score">
-        <h3>Score: </h3>
-      </div>
-    </div>
-  </div>
-</body>
-</html>
+li {
+	display: block;
+	position: relative;
+	padding: 20px 0px;
+}
+
+h2 {
+	margin: 10px 0;
+	font-weight: 900;
+}
+
+
+/* Card
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.card {
+	display: flex;
+	flex-direction: column;	
+	background: var(--white);
+	width: 300px;
+	padding: 20px 25px;
+	border-radius: 20px;
+	box-shadow: 0 19px 38px rgba(0, 0, 0, 0.13);
+}
+
+
+/* Radio Button
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+input[type=radio] {
+	position: absolute;
+	visibility: hidden;
+}
+
+label { 
+	cursor: pointer; 
+	font-weight: 400;
+}
+
+.check {
+	width: 30px; height: 30px;
+	position: absolute;
+	border-radius: 50%;
+	transition: transform .6s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+
+/* Reset */
+input#one ~ .check { 
+	transform: translate(-50px, -25px); 
+	background: var(--secondary-c); 
+}
+input#two ~ .check { 
+	transform: translate(-50px, -83px); 
+	background: var(--primary-c);
+	box-shadow: 0 6px 12px rgba(33, 150, 243, 0.35);
+}
+
+/* Radio Input #1 */
+input#one:checked ~ .check { transform: translate(-50px, 33px); }
+
+/* Radio Input #2  */
+input#two:checked ~ .check { transform: translate(-50px, -25px); }
+
+<div class="card">
+	<h2>Radio Buttons</h2>
+	
+	<ul>
+		<li>
+			<input type="radio" name="name" id="one" checked />
+			<label for="one">Option #1</label>
+			
+			<div class="check"></div>
+		</li>
+		
+		<li>
+			<input type="radio" name="name" id="two" />
+			<label for="two">Option #2</label>
+			
+			<div class="check"></div>
+		</li>
+	</ul>
+</div>
