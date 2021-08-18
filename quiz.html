@@ -1,10 +1,19 @@
 <html>
     <h1 style="font: size 5%">MEME QUIZ</h1>
-<style>
-
+<head><link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    </head>
+    <style>
+      
+       body{
+ margin-top:0px;
+ margin-left:0px;
+ margin-right:0px;
+ background-color: khaki;
+}
 p{
     font-size: 200%;
-    text-align: left;
+    text-align: center;
 }
 
 p1{
@@ -13,11 +22,11 @@ p1{
     }
     h3{
         font-size: 200%;
-        text-align: left;
+        text-align: center;
     }
     h4{
         font-size: 200%;
-        text-align: left;
+        text-align: center;
 }        
 p3{
     font-size: 200%;
@@ -25,52 +34,63 @@ p3{
 }
 h5{
     font-size: 200%;
-        text-align: left;
+        text-align: center;
 }
 
 p4{
     font-size: 200%;
-        text-align: left;
+        text-align: center;
 }
 
-h6{
+h6,h7{
 font-size: 200%;
-        text-align: left;
+        text-align: center;
 }
 
-p5{
+p5,p6{
     font-size: 200%;
-        text-align: left;
+        text-align: center;
 }
 
 h7{
     font-size: 200%;
-        text-align: left;
+        text-align: center;
 
 }
+h8{
+    font-size: 200%;
+        text-align: center;
+
+
+
 
 
 
 
 </style>
 
+    </style>
+
+
+<center>
     <body>
 
-
-
-        <img src="quiz/Screenshot_2021-08-13_170446.png" width="480" height="288">
+       
+<form>
+       <img src="quiz/Screenshot_2021-08-13_170446.png" class="center" width="480" height="288">
         <form action="/action_page.php">
             <p>Who Is This Handsome Dog:</p>
            <h3> 
-          <input type="radio" id="Dage" name="fav_language" value="Dage">
-          <label for="Dage">Dage</label><br>
-          <input type="radio" id="Dogg" name="fav_language" value="Dogg">
-          <label for="Dogg">Dogg</label><br>
-          <input  type="radio" id="Doggo"  name="fav_language" value="Doggo">
-          <label for="Doggo">Doggo</label><br>
-          <input  type="radio" id="Doge"  name="fav_language" value="Doge">
-          <label for="Dog">Doge</label><br>
-           </h3>
+            <div class="radiobtn">
+       <input class="form-check-input"  type="checkbox" id="Dage" name="fav_language" value="Dage">
+        <label for="Dage">Dage</label><br>
+       <input class="form-check-input"  type="checkbox" id="Dogg" name="fav_language" value="Dogg">
+        <label for="Dogg">Dogg</label><br>
+        <input class="form-check-input"  type="checkbox" id="Doggo"  name="fav_language" value="Doggo">
+        <label for="Doggo">Doggo</label><br>
+        <input class="form-check-input"  type="checkbox" id="Doge"  name="fav_language" value="Doge">
+        <label for="Dog">Doge</label><br>
+          </div> </h3>
           </form> 
           
           
@@ -78,69 +98,121 @@ h7{
           <form action="/action_page.php"><br>
             <p1>Who Is This Dog:</p1>
             <h4>
-          <input type="radio" id="A waiter" name="fav_language" value="A waiter">
-          <label for="A waiter">A waiter</label><br>
-          <input type="radio" id="John cena" name="fav_language" value="John cena">
-          <label for="John cena">John cena</label><br>
-          <input type="radio" id="Spongebob" name="fav_language" value="Spongebob">
-          <label for="Spongebob">Spongebob</label><br>
-          <input type="radio" id=" A cat" name="fav_language" value=" A cat">
-            <label for="A cat">A cat</label><br>
+       <input class="form-check-input"  type="checkbox" id="A waiter" name="fav_language" value="A waiter">
+        <label for="A waiter">A waiter</label><br>
+       <input class="form-check-input"  type="checkbox" id="John cena" name="fav_language" value="John cena">
+        <label for="John cena">John cena</label><br>
+       <input class="form-check-input"  type="checkbox" id="Spongebob" name="fav_language" value="Spongebob">
+        <label for="Spongebob">Spongebob</label><br>
+       <input class="form-check-input"  type="checkbox" id=" A cat" name="fav_language" value=" A cat">
+        <label for="A cat">A cat</label><br>
            </h4>
           </form>
 
-
+<center>
           <img src="quiz/Baby-Yoda.gif" width="480" height="288">
           <form action="/action_page.php"><br>
-        <p3>In 2020, there were a lot of Baby Yoda memes. Baby Yoda was also named as the Most Adorable Creature of 2020. Where does Yoda appear originally?
+        <p3>In 2020, there were a lot of Baby Yoda memes. Baby Yoda was also named as<br> the Most Adorable Creature of 2020. Where does Yoda appear originally?
         </p3><br>
         <h5>
-        <input type="radio" id=" blade runner" name="fav_language" value=" blade runner">
-          <label for=" blade runner"> blade runner</label><br>
-        <input type="radio" id="  star trek" name="fav_language" value="  star trek">
-          <label for="  star trek">  star trek</label><br>
-        <input type="radio" id="  star wars" name="fav_language" value=" star wars">
-          <label for=" star wars">  star wars</label><br>
-         <input type="radio" id=" gurdian of the galaxy" name="fav_language" value=" gurdian of the galaxy">
-          <label for="gurdian of the galaxy">  gurdian of the galaxy</label><br>
-         </h5>
+       <input class="form-check-input"  type="checkbox" id=" blade runner" name="fav_language" value=" blade runner">
+        <label for=" blade runner"> blade runner</label><br>
+       <input class="form-check-input"  type="checkbox" id="  star trek" name="fav_language" value="  star trek">
+        <label for="  star trek">  star trek</label><br>
+       <input class="form-check-input"  type="checkbox" id="  star wars" name="fav_language" value=" star wars">
+        <label for=" star wars">  star wars</label><br>
+       <input class="form-check-input"  type="checkbox" id=" gurdian of the galaxy" name="fav_language" value=" gurdian of the galaxy">
+        <label for="gurdian of the galaxy">  gurdian of the galaxy</label><br>
+         </h5></form>
           </form>
-
+</center>
           <img src="quiz/Imposter.jpg" width="480" height="288">
           <form action="/action_page.php"><br>
-            <p4>In 2020, there were a lot of Baby Yoda memes. Baby Yoda was also named as the Most Adorable Creature of 2020. Where does Yoda appear originally?
+            <p4>There were a lot of memes made with this viral game that gained immense popularity<br> among the masses in 2020. What is the name of this game?
             </p4><br>
             <h6>
-            <input type="radio" id=" blade runner" name="fav_language" value=" blade runner">
-              <label for=" blade runner"> blade runner</label><br>
-            <input type="radio" id="  star trek" name="fav_language" value="  star trek">
-              <label for="  star trek">  star trek</label><br>
-            <input type="radio" id="  star wars" name="fav_language" value=" star wars">
-              <label for=" star wars">  star wars</label><br>
-             <input type="radio" id=" gurdian of the galaxy" name="fav_language" value=" gurdian of the galaxy">
-              <label for="gurdian of the galaxy">  gurdian of the galaxy</label><br>
+       <input class="form-check-input"  type="checkbox" id=" blade runner" name="fav_language" value=" blade runner">
+        <label for=" blade runner"> SUS AMmong</label><br>
+       <input class="form-check-input"  type="checkbox" id="  star trek" name="fav_language" value="  star trek">
+        <label for="  star trek">  Mario</label><br>
+       <input class="form-check-input"  type="checkbox" id="  star wars" name="fav_language" value=" star wars">
+        <label for=" star wars">  Imposters</label><br>
+       <input class="form-check-input"  type="checkbox" id=" gurdian of the galaxy" name="fav_language" value=" gurdian of the galaxy">
+        <label for="gurdian of the galaxy"> Among us</label><br>
              </h6>
               </form>
 
               <img src="quiz/maxresdefault.jpg"  width="480" height="288">
               <form action="/action_page.php"><br>
                 <p5>who is this guy?</p5>
-                </p5><br>
+                <br>
                
                 <h7>
-                <input type="radio" id=" ugandan kunckles" name="fav_language" value=" ugandan kunckles">
+               <input class="form-check-input"  type="checkbox" id=" ugandan kunckles" name="fav_language" value=" ugandan kunckles">
                   <label for=" ugandan kunckles"> ugandan kunckles</label><br>
-                <input type="radio" id="  peep" name="fav_language" value="  peep">
+               <input class="form-check-input"  type="checkbox" id="  peep" name="fav_language" value="  peep">
                   <label for="  peep">  peep</label><br>
-                <input type="radio" id="  .imposter from among us" name="fav_language" value=" .imposter from among us">
+               <input class="form-check-input"  type="checkbox" id="  .imposter from among us" name="fav_language" value=" .imposter from among us">
                   <label for=" .imposter from among us"> imposter from among us</label><br>
-                 <input type="radio" id=" chad" name="fav_language" value=" chad">
+                <input class="form-check-input"  type="checkbox" id=" chad" name="fav_language" value=" chad">
                   <label for="chad"> chad</label><br>
                  </h7>
+                </form>
 
-                  </form>
+                <img src="quiz/Mcdonald-twitter.jpeg"  width="480" height="288">
+                <form action="/action_page.php"><br>
+                  <p6>Which were the blink and miss structures that popped up around the world<br> mysteriously that gave rise to various memes?</p6>
+                  <br>
+                 
+                  <h8>
+                 <input class="form-check-input"  type="checkbox" id=" Plaque " name="fav_language" value=" Plaque ">
+                    <label for=" Plaque "> Plaque </label><br>
+                 <input class="form-check-input"  type="checkbox" id=" Monolith " name="fav_language" value="  Monolith ">
+                    <label for=" Monolith ">  Monolith </label><br>
+                 <input class="form-check-input"  type="checkbox" id="   Pyramid " name="fav_language" value="  Pyramid ">
+                    <label for="  Pyramid ">  Pyramid </label><br>
+                  <input class="form-check-input"  type="checkbox" id="  Scriptures" name="fav_language" value="  Scriptures">
+                    <label for=" Scriptures">  Scriptures</label><br>
+                   </h8>
+                   </form>
+
+                   <img src="quiz/R.jpg"  width="480" height="288">
+                   <form action="/action_page.php"><br>
+                     <p6>Where is GigaChad from?</p6>
+                     <br>
+                    
+                     <h8>
+                    <input class="form-check-input"  type="checkbox" id=" Russia " name="fav_language" value=" Russia ">
+                       <label for=" Russia "> Russia</label><br>
+                    <input class="form-check-input"  type="checkbox" id=" America" name="fav_language" value="  America ">
+                       <label for=" America "> America</label><br>
+                    <input class="form-check-input"  type="checkbox" id="  Germany " name="fav_language" value="  Germany ">
+                       <label for="  Germany ">  Germany</label><br>
+                     <input class="form-check-input"  type="checkbox" id=" Ukraine" name="fav_language" value="  Ukraine">
+                       <label for=" Ukraine">  Ukraine</label><br>
+                     </h8></form>
+
+                     <img src="quiz/R_1.jpg"  width="480" height="288">
+                   <form action="/action_page.php"><br>
+                     <p6>One of the viral memes that ruled 2020 was the famous ‘Coffin Dance’<br> a group of dancing pallbearers carried a coffin on their shoulders and danced as it was the last wish of the deceased. <br>Which country did this video originate from?</p6>
+                     <br>
+                    
+                     <h8>
+                        <input class="form-check-input"  type="checkbox" id=" Russia " name="fav_language" value=" Russia ">
+                       <label for=" Russia "> Russia</label><br>
+                    <input class="form-check-input"  type="checkbox" id=" America" name="fav_language" value="  America ">
+                       <label for=" America "> America</label><br>
+                    <input class="form-check-input"  type="checkbox" id="  Germany " name="fav_language" value="  Germany ">
+                       <label for="  Germany ">   Germany</label><br>
+                     <input class="form-check-input"  type="checkbox" id=" Ukraine" name="fav_language" value="  Ukraine">
+                       <label for=" Ukraine">  Ukraine</label><br>
+                     </h8></form>
 
 
+                     <div class="form-switch">
+  
+
+                      
 
 
 
@@ -148,4 +220,5 @@ h7{
 
 
     </body>
+</center>
 </html>
