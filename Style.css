@@ -223,17 +223,7 @@ Remove or comment-out the code block below to see how the browser will fall-back
                     padding-bottom: 10px;
                     margin-bottom: 10px;
                   }
-                  h2::after{
-                    content: '';
-                    position: absolute;
-                    left: 50%;
-                    bottom: 0;
-                    transform: translateX(-50%);
-                    height: 4px;
-                    width:50px;
-                    border-radius: 2px;
-                    background-color: #2ecc71;
-                  }
+              
 
                   .footer{
                     position: fixed;
