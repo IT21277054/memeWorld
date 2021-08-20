@@ -1,0 +1,193 @@
+/*NAVBAR*/
+body {
+margin: 0;
+font-family: Arial, Helvetica, sans-serif;
+}
+.topnav {
+overflow: hidden;
+background-color: #333;
+}
+.topnav a {
+float: right;
+color: #f2f2f2;
+text-align: center;
+padding: 14px 16px;
+text-decoration: none;
+font-size: 17px;
+}
+.topnav a:hover {
+background-color: #ddd;
+color: black;
+}
+.topnav a.active {
+background-color: #04AA6D;
+color: white;
+}
+.topnav img{
+max-width: 4%;
+}
+/*NAVBAR*/
+/*
+All grid code is placed in a 'supports' rule (feature query) at the bottom of the CSS (Line 77). 
+The 'supports' rule will only run if your browser supports CSS grid.
+Flexbox is used as a fallback so that browsers which don't support grid will still recieve an identical layout.
+*/
+@import url(https://fonts.googleapis.com/css?family=Montserrat:500);
+:root {
+/* Base font size */
+font-size: 10px;
+}
+*,
+*::before,
+*::after {
+box-sizing: border-box;
+}
+body {
+min-height: 100vh;
+background-color: #fafafa;
+}
+.container {
+max-width: 100rem;
+margin: 0 auto;
+padding: 0 2rem 2rem;
+}
+.heading {
+font-family: "Montserrat", Arial, sans-serif;
+font-size: 4rem;
+font-weight: 500;
+line-height: 1.5;
+text-align: center;
+padding: 3.5rem 0;
+color: #1a1a1a;
+}
+.heading span {
+display: block;
+}
+.gallery {
+display: flex;
+flex-wrap: wrap;
+/* Compensate for excess margin on outer gallery flex items */
+margin: -1rem -1rem;
+}
+.gallery-item {
+/* Minimum width of 24rem and grow to fit available space */
+flex: 1 0 24rem;
+/* Margin value should be half of grid-gap value as margins on flex items don't collapse */
+margin: 1rem;
+box-shadow: 0.3rem 0.4rem 0.4rem rgba(0, 0, 0, 0.4);
+overflow: hidden;
+}
+.gallery-image {
+display: block;
+width: 100%;
+height: 100%;
+object-fit: cover;
+transition: transform 400ms ease-out;
+}
+.gallery-image:hover {
+transform: scale(1.15);
+}
+/*
+The following rule will only run if your browser supports CSS grid.
+Remove or comment-out the code block below to see how the browser will fall-back to flexbox styling. 
+*/
+@supports (display: grid) {
+.gallery {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(24rem, 1fr));
+grid-gap: 2rem;
+}
+.gallery,
+.gallery-item {
+margin: 0;
+}
+}
+/*About us page*/
+body {background-color: #505050 ;}
+h1{color:rgb(255, 255, 255); font-family: Helvetica; text-align: center; font-size: 40px; }
+p{font-size: 20px; text-align: center; line-height: 1.5; font-family: Helvetica; }
+div{align-items: center;}
+/*Bitmojes*/
+.manuja{
+position: absolute;
+top: 65%;
+right:48%;
+}
+.shamry{
+position: absolute;
+top: 64%;
+right:25%;
+}
+.banuka{
+position: absolute;
+top: 40%;
+right:65%;
+}
+.sunera{
+position: absolute;
+top: 40%;
+right:4%;
+}
+.vishwa{
+position: absolute;
+top: 17%;
+right:70%;
+}
+.thusara{
+position: absolute;
+top: 17%;
+right:2%;
+}
+figcaption{
+text-align: justify;
+font-size: 20px;
+}
+/*Contact Us Page */
+.container_contact_us{
+position: relative;
+display: flex;
+justify-content: center;
+align-items: center;
+width: 100%;
+height: 100%;
+padding: 20px 100px;
+}  
+.container_contact_us:after{
+content: '';
+position: absolute;
+left: 0;
+top: 0;
+width: 100%;
+height: 100%;
+}
+.content_box_contact_us{
+max-width: 850px;
+display: grid;
+grid-template-columns: repeat(2,1fr);
+justify-content: center;
+align-items: center;
+text-align: center;
+}
+.left_contact_us{
+height: 100%;
+background: url("Images/IAG_globe_v5.gif") no-repeat center;
+background-size: cover;  
+}
+.right_contact_us{
+padding: 25px 40px;
+}
+h2{
+position: relative;
+padding-bottom: 10px;
+margin-bottom: 10px;
+}
+.footer{
+position: fixed;
+left: 0;
+bottom: 0;
+width: 100%;
+height: 5%;
+background-color:#3f3f3f;
+color: #fff;
+text-align: center;
+}
